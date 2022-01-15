@@ -14,17 +14,17 @@ import numpy as np
 #         print(xn)
 
 # 3d
-# x = np.array([2, 5, 6, 6])
-# for i in range(1, len(x) + 1):
-#     j = len(x) / i
-#     if j.is_integer():
-#         for k in range(1, len(x) + 1):
-#             j2 = len(x) / k
-#             if j2.is_integer: 
-#                 if j * j2 * i == len(x):
-#                     xn = x.reshape(i, int(j), int(j2))
-#                     print(xn)
-#                     print("====")
+x = np.array([2, 5, 6, 6])
+for i in range(1, len(x) + 1):
+    j = len(x) / i
+    if j.is_integer():
+        for k in range(1, len(x) + 1):
+            j2 = len(x) / k
+            if j2.is_integer: 
+                if j * j2 * i == len(x):
+                    xn = x.reshape(i, int(j), int(j2))
+                    print(xn)
+                    print("====")
 
 #4
 # x = np.random.randint(0, 100, size=36)

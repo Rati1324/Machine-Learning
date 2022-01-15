@@ -3,17 +3,18 @@ import string, random
 from openpyxl import load_workbook
 import xlsxwriter
 
-writer = pd.ExcelWriter('ML/ML_Laboratory_6/data.xlsx', engine='xlsxwriter')
+writer = pd.ExcelWriter('Machine-Learning/ML_Laboratory_6/data.xlsx', engine='openpyxl', mode='a')
 
 #1
-x = ''.join(random.choice(string.ascii_lowercase) for i in range(10))
-x2 = random.sample(range(0, 10), 1)[0]
-x3 = random.sample(range(1, 7), 1)[0]
-x4 = random.sample(range(1, 100), 1)[0]
+# x = ''.join(random.choice(string.ascii_lowercase) for i in range(10))
+# x2 = random.sample(range(0, 10), 1)[0]
+# x3 = random.sample(range(1, 7), 1)[0]
+# x4 = random.sample(range(1, 100), 1)[0]
 
-df1 = pd.DataFrame([[x, x2, x3, x4]], 
-                    columns=['col 1', 'col 2', 'col 3', 'col 4'])
-df1.to_excel(writer, index=True, sheet_name="Sheet_1")
+# df1 = pd.DataFrame([[x, x2, x3, x4]], 
+#                     columns=['col 1', 'col 2', 'col 3', 'col 4'])
+# df1.to_excel(writer, index=True, sheet_name="Sheet_1")
+# writer.save()
 
 #2
 f_name = ['mari', 'ana', 'dato', 'gio']
