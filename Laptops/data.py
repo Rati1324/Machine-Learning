@@ -8,10 +8,18 @@ response = TextResponse(url.url, body=url.text, encoding='utf-8')
 items = response.css("div.caption a::attr(href)").getall()
 
 ram = []
+storage = []
+price = []
 for i in items[:1]:
     url = requests.get(i)
     response = TextResponse(url.url, body=url.text, encoding='utf-8')
-    item = response.css("td").getall()
-for i in range(len(item)):
-    if "ოპერატიული მეხსიერება" in item[i]:
-        print(item[i + 1])
+    # item = response.css("td").getall()
+    # for i in range(len(item)):
+    #     if "ოპერატიული მეხსიერება" in item[i]:
+    #         ram.append(item[i + 1][4:-5])
+    #     elif "მყარი დისკის ტიპი" in item[i]:
+    #         storage.append(item[i - 1][4:-5])
+    item = response.css("h2").get()
+    print(len(item))
+# print(ram)
+# print(storage)
